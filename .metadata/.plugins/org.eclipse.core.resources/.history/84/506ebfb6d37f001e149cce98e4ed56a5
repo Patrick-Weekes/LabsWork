@@ -1,0 +1,18 @@
+package com.axa.labs18;
+
+public class Car {
+	private String model;
+	private double speed;
+	
+	public Car(String model) {
+		this.model = model;
+		this.speed = 0;
+	}
+	
+	public void accelerate() {
+		
+	}
+	
+	public
+
+}

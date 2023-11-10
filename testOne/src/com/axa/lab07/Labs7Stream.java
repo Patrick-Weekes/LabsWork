@@ -1,0 +1,44 @@
+package com.axa.lab07;
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class Labs7Stream {
+	public static void start() {
+		int[] numbers = { 1, 3, -5, 7, 0, 4, 6, 8 };
+		int sumResult = sum(numbers);
+		double averageResult = average(numbers);
+		int minResult = min(numbers);
+		int maxResult = max(numbers);
+		int findIndexResult = findIndexOf(numbers, 0);
+        System.out.println("Sum: " + sumResult);
+        System.out.println("Average: " + averageResult);
+        System.out.println("Min: " + minResult);
+        System.out.println("Max: " + maxResult);
+        System.out.println("Index of 0: " + findIndexResult);
+	    Lab7Legit.displayArray(numbers);
+	    sort(numbers);
+	    Lab7Legit.displayArray(numbers);
+	}
+	private static int sum(int[] array) {
+		return Arrays.stream(array).sum();
+	}
+	private static double average(int[] array) {
+		return Arrays.stream(array).average().getAsDouble();
+	}
+	private static int min(int[] array) {
+		return Arrays.stream(array).min().getAsInt();
+	}
+	private static int max(int[] array) {
+		return Arrays.stream(array).max().getAsInt();
+	}
+	private static int findIndexOf(int[] array, int target) {
+	    return IntStream.range(0, array.length)
+	        .filter(i -> array[i] == target)
+	        .findFirst()
+	        .orElse(-1);
+	}
+	private static void sort(int[] array) {
+	    Arrays.sort(array);
+	}
+}

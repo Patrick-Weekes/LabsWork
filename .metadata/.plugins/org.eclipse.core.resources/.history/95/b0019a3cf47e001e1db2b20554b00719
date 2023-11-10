@@ -1,0 +1,14 @@
+package com.axa.labs08;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account account = new Account();
+		account.deposit(1000);
+		account.withdraw(500);
+		account.getDetails();
+
+	}
+
+}

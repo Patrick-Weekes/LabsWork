@@ -1,0 +1,29 @@
+package com.axa.test;
+
+import java.util.Scanner;
+
+public class FirstTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
+		System.out.println(getInt("Enter an intager", s));
+		System.out.println(getString("Enter a string", s));
+		s.close();
+	}
+	
+	public static int getInt(String prompt, Scanner s) {
+		System.out.println(prompt);
+		return s.nextInt();
+	}
+	
+	public static String getString(String prompt, Scanner s) {
+		System.out.println(prompt);
+		return s.nextLine();
+	}
+	
+	public void theLunchQueue() {
+		
+	}
+
+}
